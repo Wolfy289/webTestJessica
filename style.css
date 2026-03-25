@@ -188,6 +188,38 @@ main {
     text-align: center;
 }
 
+/* about */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+
+
 /* ============================================
    SERVICES GRID
    ============================================ */
