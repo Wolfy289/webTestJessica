@@ -1,6 +1,9 @@
 /* ============================================
    GLOBAL STYLES
    ============================================ */
+
+:root {
+    --primary-color: #2c3e50;
     --accent-color: #e74c3c;
     --secondary-color: #3498db;
     --text-color: #333;
@@ -14,12 +17,12 @@
     --spacing: 1.5rem;
 }
 
-:root {
-    --primary-color: #2c3e50;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -48,7 +51,7 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 142.2vh; /* 16:9 ratio */
+    width: 142.2vh;
     height: 80vh;
     transform: translate(-50%, -50%);
     z-index: 0;
