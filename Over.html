@@ -8,6 +8,49 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
+    <style>
+        .about {
+            padding: 100px 20px;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* LINKS + RECHTS */
+            gap: 60px;
+            align-items: center;
+        }
+        
+        /* FOTO LINKS */
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+        
+        /* TEKST RECHTS */
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: var(--text-light);
+        }
+        
+        /* MOBIEL (belangrijk!) */
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr; /* onder elkaar */
+                text-align: center;
+            }
+        
+            .about-image {
+                orde
+
+    </style>
 </head>
 
 <body>
