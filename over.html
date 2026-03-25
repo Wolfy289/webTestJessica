@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over mij - Jessica Damhof</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+
+<!-- ABOUT PAGINA -->
+<main class="about-page">
+
+    <section class="about">
+        <div class="container about-grid">
+
+            <div class="about-image">
+                <img src="https://static.wixstatic.com/media/80ca39_a4cc0de4588a4184b08f1e625c5145d3~mv2.jpg" alt="Jessica">
+            </div>
+
+            <div class="about-text">
+                <h2>Hoi, ik ben Jessica</h2>
+
+                <p>
+                    Ik woon in Zuidlaren en ik ben 23 jaar oud. Ik heb MBO 4 Mediaomgeving afgerond.
+                </p>
+
+                <p>
+                    Ik ben veel bezig met fotografie, film en creatieve projecten.
+                </p>
+
+                <p>
+                    Ik werk met Adobe Premiere Pro, Photoshop, Lightroom en After Effects.
+                </p>
+
+                <a href="CV.pdf" class="cta-button" target="_blank">Mijn CV</a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+
+<!-- SCRIPT -->
+<script>
+    // Header laden
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        });
+
+    // Footer laden
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
