@@ -12,7 +12,7 @@
 }
 
 .header {
-    background: linear-gradient(135deg, #f3ec6e 0%, #edb73e 100%);
+    background: linear-gradient(135deg, #fff542 0%, #ffb000 100%);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
