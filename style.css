@@ -167,18 +167,6 @@ main {
     padding-bottom: 20px;
 }
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
-    border-radius: 2px;
-}
-
 .section-text {
     font-size: 1.1em;
     color: var(--text-light);
