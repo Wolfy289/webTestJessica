@@ -382,19 +382,38 @@
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
+    function activateTab(tabName) {
+        // Remove active from all buttons en content
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        // Add active to button
+        const button = document.querySelector(`[data-tab="${tabName}"]`);
+        if (button) {
+            button.classList.add('active');
+        }
+
+        // Show corresponding content
+        const content = document.getElementById(tabName);
+        if (content) {
+            content.classList.add('active');
+        }
+    }
+
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active from all buttons en content
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
-
-            // Add active to clicked button
-            button.classList.add('active');
-
-            // Show corresponding content
             const tabName = button.getAttribute('data-tab');
-            document.getElementById(tabName).classList.add('active');
+            activateTab(tabName);
+            window.location.hash = tabName;
         });
+    });
+
+    // Check voor hash in URL bij laden
+    window.addEventListener('load', () => {
+        const hash = window.location.hash.substring(1);
+        if (hash && ['film', 'fotografie', 'animatie', 'grafisch'].includes(hash)) {
+            activateTab(hash);
+        }
     });
 </script>
 
