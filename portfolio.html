@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jessica Damhof</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .portfolio-section {
+            padding: 100px 20px;
+        }
+
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: montserrat, sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 80px;
+            color: var(--text-dark);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .portfolio-item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .portfolio-item h3 {
+            font-family: montserrat, sans-serif;
+            font-size: 1.8rem;
+            text-align: center;
+            margin: 0;
+            color: var(--text-dark);
+        }
+
+        .portfolio-item p {
+            font-size: 15px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            text-align: center;
+            margin: 0;
+        }
+
+        .portfolio-media {
+            width: 100%;
+            height: auto;
+        }
+
+        .portfolio-media video,
+        .portfolio-media img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+        .portfolio-media {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-media video:hover,
+        .portfolio-media img:hover {
+            box-shadow: var(--shadow);
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-button {
+            display: inline-block;
+            background-color: var(--primary-color, #333);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: montserrat, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin: 0 auto;
+            width: fit-content;
+        }
+
+        .portfolio-button:hover {
+            background-color: var(--primary-hover, #555);
+        }
+
+        /* MOBIEL */
+        @media (max-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-section {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 60px;
+            }
+
+            .portfolio-grid {
+                gap: 30px;
+            }
+
+            .portfolio-item h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+
+<!-- PORTFOLIO PAGINA -->
+<main class="portfolio-page">
+
+    <section class="portfolio-section">
+        <div class="portfolio-container">
+
+            <h2 class="section-title">Mijn Werk</h2>
+
+            <div class="portfolio-grid">
+
+                <!-- FOTOGRAFIE -->
+                <div class="portfolio-item">
+                    <h3>Fotografie</h3>
+                    <p>Mijn 2024 in foto's</p>
+                    <div class="portfolio-media">
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_1a850d15c0164638b84f9706c07fdfd0f000.jpg/v1/fill/w_653,h_369,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/80ca39_1a850d15c0164638b84f9706c07fdfd0f000.jpg">
+                            <source src="https://video.wixstatic.com/video/80ca39_1a850d15c0164638b84f9706c07fdfd0/1080p/mp4/file.mp4" type="video/mp4">
+                            Je browser ondersteunt deze video niet.
+                        </video>
+                    </div>
+                    <a href="#fotografie" class="portfolio-button">Klik voor meer</a>
+                </div>
+
+                <!-- FILM -->
+                <div class="portfolio-item">
+                    <h3>Film</h3>
+                    <p>Mijn Instagram</p>
+                    <div class="portfolio-media">
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_3cb21f12dba74ec2a2e3dc740f4aa6faf002.jpg/v1/fill/w_653,h_371,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/80ca39_3cb21f12dba74ec2a2e3dc740f4aa6faf002.jpg">
+                            <source src="https://video.wixstatic.com/video/80ca39_3cb21f12dba74ec2a2e3dc740f4aa6fa/720p/mp4/file.mp4" type="video/mp4">
+                            Je browser ondersteunt deze video niet.
+                        </video>
+                    </div>
+                    <a href="#film" class="portfolio-button">Klik voor meer</a>
+                </div>
+
+                <!-- ANIMATIE -->
+                <div class="portfolio-item">
+                    <h3>Animatie</h3>
+                    <p>Motion Graphics & Animatie</p>
+                    <div class="portfolio-media">
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_674e608533ae4deb9c3bbf1a13488df3f000.jpg/v1/fill/w_375,h_211,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/80ca39_674e608533ae4deb9c3bbf1a13488df3f000.jpg">
+                            <source src="https://video.wixstatic.com/video/80ca39_674e608533ae4deb9c3bbf1a13488df3/1080p/mp4/file.mp4" type="video/mp4">
+                            Je browser ondersteunt deze video niet.
+                        </video>
+                    </div>
+                    <a href="#animatie" class="portfolio-button">Klik voor meer</a>
+                </div>
+
+                <!-- GRAFISCH -->
+                <div class="portfolio-item">
+                    <h3>Grafisch</h3>
+                    <p>Design & Branding</p>
+                    <div class="portfolio-media">
+                        <img src="https://static.wixstatic.com/media/80ca39_0266b9272200456e947e47ef60740527~mv2.jpg/v1/fill/w_293,h_416,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/80ca39_0266b9272200456e947e47ef60740527~mv2.jpg" alt="Grafisch Design">
+                    </div>
+                    <a href="#grafisch" class="portfolio-button">Klik voor meer</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+
+<!-- SCRIPT -->
+<script>
+    // Header laden
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        });
+
+    // Footer laden
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
