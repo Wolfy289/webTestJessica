@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diensten - Jessica Damhof</title>
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .diensten {
+            padding: 100px 20px;
+        }
+
+        .diensten-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .diensten-intro {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .diensten-intro h2 {
+            font-family: montserrat, sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+
+        .diensten-intro p {
+            font-size: 15px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .diensten-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: flex-start;
+            margin-bottom: 80px;
+        }
+
+        .diensten-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .diensten-content h3 {
+            font-family: montserrat, sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .diensten-content p {
+            font-size: 15px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .diensten-media {
+            width: 100%;
+        }
+
+        .diensten-media img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .diensten-media video {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color, #333);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: montserrat, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            width: fit-content;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-hover, #555);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--bg-light, #f5f5f5);
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color, #333);
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0.7);
+        }
+
+        .social-links a:hover img {
+            filter: brightness(1);
+        }
+
+        /* MOBIEL */
+        @media (max-width: 768px) {
+            .diensten {
+                padding: 60px 20px;
+            }
+
+            .diensten-intro h2 {
+                font-size: 2rem;
+            }
+
+            .diensten-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .diensten-media {
+                order: -1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+
+<!-- DIENSTEN PAGINA -->
+<main class="diensten-page">
+
+    <section class="diensten">
+        <div class="diensten-container">
+
+            <!-- INTRO SECTION -->
+            <div class="diensten-intro">
+                <h2>Toys42hands</h2>
+            </div>
+
+            <!-- CONTENT GRID -->
+            <div class="diensten-grid">
+
+                <!-- AFBEELDING & VIDEO LINKS -->
+                <div class="diensten-media">
+                    <img src="https://static.wixstatic.com/media/80ca39_5105533b52504eff89c9be9e13002f2f~mv2.jpg" alt="Toys42hands logo">
+                    <img src="https://static.wixstatic.com/media/80ca39_4dd33e27e649448a9574031c1fa3ba72~mv2.png" alt="Toys42hands banner mockup">
+                    <video width="100%" controls style="border-radius: 15px; box-shadow: var(--shadow);">
+                        <source src="https://video.wixstatic.com/video/80ca39_acf45d76a0b0464ab6b755041dd3938e/1080p/mp4/file.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- TEKST RECHTS -->
+                <div class="diensten-content">
+
+                    <div>
+                        <h3>Over het project</h3>
+                        <p>
+                            Toys42hands is het bedrijf van mijn moeder, maar eigenlijk is het ons familiebedrijf. Daardoor help ik regelmatig mee. De webshop biedt een breed assortiment speels en educatief speelgoed en oefenmateriaal voor ouders, het onderwijs, de zorg en therapeutische praktijken.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Mijn werkzaamheden</h3>
+                        <p>
+                            Als er bijvoorbeeld nieuw speelgoed binnenkomt en er geen goede foto's van de producten zijn, maak ik nieuwe foto's of videos. Ook beheer ik samen met mijn moeder de sociale media van Toys42hands.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Huisstijl & Design</h3>
+                        <p>
+                            Een half jaar geleden kreeg Toys42hands een nieuwe website en huisstijl. Daarvoor moesten er nieuwe banners en flyers gemaakt worden, wat ik op mij heb genomen. Ik heb ze een nieuwe moderne look gegeven die veel beter aansluit bij het merk.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Promo Video</h3>
+                        <p>
+                            Als proefwerk voor mijn MBO4 opleiding heb ik een 'trailer' voor Toys42hands gemaakt, waarin visueel uitgelegd wordt wat Toys42hands zo bijzonder en anders maakt.
+                        </p>
+                    </div>
+
+                    <!-- BUTTON & SOCIAL -->
+                    <div>
+                        <a href="https://www.toys42hands.nl/" class="cta-button" target="_blank">Naar website</a>
+                        
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/toys42hands/" target="_blank" title="Toys42hands Instagram">
+                                <img src="https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+
+<!-- SCRIPT -->
+<script>
+    // Header laden
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        });
+
+    // Footer laden
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
