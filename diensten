@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over mij - Jessica Damhof</title>
+
+    
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .project {
+            padding: 100px 20px;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        /* TEKST */
+        .project-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* BUTTON */
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        
+        /* SOCIAL */
+        .social img {
+            width: 40px;
+            margin-top: 15px;
+        }
+        
+        /* MEDIA */
+        .project-media {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .project-media video {
+            width: 100%;
+            border-radius: 15px;
+        }
+        
+        .project-media img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        
+        /* MOBIEL */
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        
+            .project-media {
+                order: -1;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+
+<!-- ABOUT PAGINA -->
+<main class="about-page">
+
+  <section class="project">
+      <div class="container project-grid">
+  
+          <!-- TEKST -->
+          <div class="project-text">
+              <p>
+                  Toys42hands is het bedrijf van mijn moeder of eigenlijk is het ons familie bedrijf, daardoor help ik regelmatig mee...
+              </p>
+  
+              <p>
+                  Als er bijvoorbeeld nieuw speelgoed binnenkomt en er geen goede foto's van de producten zijn, maak ik nieuwe foto's...
+              </p>
+  
+              <p>
+                  Een half jaar geleden kreeg Toys42hands een nieuwe website en huisstijl...
+              </p>
+  
+              <p>
+                  Ook heb ik als proef een ‘’trailer’’ voor Toys42hands gemaakt...
+              </p>
+  
+              <a href="https://www.toys42hands.nl/" target="_blank" class="cta-button">
+                  Naar website →
+              </a>
+  
+              <!-- SOCIAL -->
+              <div class="social">
+                  <a href="https://www.instagram.com/toys42hands/" target="_blank">
+                      <img src="https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png" alt="Instagram">
+                  </a>
+              </div>
+          </div>
+  
+          <!-- VIDEO + AFBEELDINGEN -->
+          <div class="project-media">
+  
+              <video controls poster="https://static.wixstatic.com/media/80ca39_acf45d76a0b0464ab6b755041dd3938ef000.jpg">
+                  <source src="https://video.wixstatic.com/video/80ca39_acf45d76a0b0464ab6b755041dd3938e/1080p/mp4/file.mp4" type="video/mp4">
+              </video>
+  
+              <img src="https://static.wixstatic.com/media/80ca39_5105533b52504eff89c9be9e13002f2f~mv2.jpg" alt="Logo">
+  
+              <img src="https://static.wixstatic.com/media/80ca39_4dd33e27e649448a9574031c1fa3ba72~mv2.png" alt="Banner">
+  
+          </div>
+  
+      </div>
+  </section>
+
+
+</main>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+
+<!-- SCRIPT -->
+<script>
+    // Header laden
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        });
+
+    // Footer laden
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
