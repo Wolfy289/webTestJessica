@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jessica Damhof</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .contact-section {
+            padding: 100px 20px;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: montserrat, sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 80px;
+            color: var(--text-dark);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .contact-card {
+            background-color: var(--bg-light, #f9f9f9);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-card a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-card .icon {
+            font-size: 3.5rem;
+            display: block;
+        }
+
+        .contact-card .icon img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .contact-card h3 {
+            font-family: montserrat, sans-serif;
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--text-dark);
+        }
+
+        .contact-card p {
+            font-size: 15px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin: 0;
+            word-break: break-all;
+        }
+
+        /* MOBIEL */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 60px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .contact-card {
+                padding: 30px 20px;
+            }
+
+            .contact-card .icon {
+                font-size: 3rem;
+            }
+
+            .contact-card .icon img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .contact-card h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+
+<!-- CONTACT PAGINA -->
+<main class="contact-page">
+
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact-grid">
+
+                <!-- EMAIL CARD -->
+                <div class="contact-card">
+                    <a href="mailto:jessica.damhof@outlook.com">
+                        <div class="icon">📧</div>
+                        <h3>Email</h3>
+                        <p>jessica.damhof@outlook.com</p>
+                    </a>
+                </div>
+
+                <!-- INSTAGRAM CARD -->
+                <div class="contact-card">
+                    <a href="https://www.instagram.com/jessica_damhof/" target="_blank">
+                        <div class="icon">
+                            <img src="https://static.wixstatic.com/media/11062b_ca1d837ce7194421b781ee7384061a8e~mv2.png" alt="Instagram">
+                        </div>
+                        <h3>Instagram</h3>
+                        <p>@jessica_damhof</p>
+                    </a>
+                </div>
+
+                <!-- LINKEDIN CARD -->
+                <div class="contact-card">
+                    <a href="https://www.linkedin.com/in/jessica-damhof-b53673300/?originalSubdomain=nl" target="_blank">
+                        <div class="icon">
+                            <img src="https://static.wixstatic.com/media/11062b_72c275822d4344358ee379f14e7e115f~mv2.png" alt="LinkedIn">
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Jessica Damhof</p>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+
+<!-- SCRIPT -->
+<script>
+    // Header laden
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        });
+
+    // Footer laden
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
