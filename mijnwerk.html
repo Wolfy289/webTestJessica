@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Werk - Jessica Damhof</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .portfolio-section {
+            padding: 100px 20px;
+        }
+
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: montserrat, sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-dark);
+        }
+
+        /* TAB BUTTONS */
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            font-family: montserrat, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 15px 35px;
+            border: 2px solid var(--text-dark, #333);
+            background-color: transparent;
+            color: var(--text-dark, #333);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            background-color: var(--bg-light, #f5f5f5);
+            transform: translateY(-2px);
+        }
+
+        .tab-btn.active {
+            background-color: var(--primary-color, #333);
+            color: white;
+            border-color: var(--primary-color, #333);
+        }
+
+        /* TAB CONTENT */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* CONTENT STYLING */
+        .content-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .content-intro p {
+            font-size: 15px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .content-intro h3 {
+            font-family: montserrat, sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .media-item {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .media-item h4 {
+            font-family: montserrat, sans-serif;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .media-item p {
+            font-size: 14px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .media-item video,
+        .media-item img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* MOBIEL */
+        @media (max-width: 768px) {
+            .portfolio-section {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+
+            .tab-buttons {
+                gap: 10px;
+            }
+
+            .tab-btn {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+
+<!-- PORTFOLIO PAGINA -->
+<main class="portfolio-page">
+
+    <section class="portfolio-section">
+        <div class="portfolio-container">
+
+            <h2 class="section-title">Mijn Werk</h2>
+
+            <!-- TAB BUTTONS -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="film">Film</button>
+                <button class="tab-btn" data-tab="fotografie">Fotografie</button>
+                <button class="tab-btn" data-tab="animatie">Animatie</button>
+                <button class="tab-btn" data-tab="grafisch">Grafisch</button>
+            </div>
+
+            <!-- FILM TAB -->
+            <div id="film" class="tab-content active">
+                <div class="content-intro">
+                    <p>
+                        Wanneer ik film, is het een geweldige ervaring om mijn ideeën tot leven te brengen. Ik zoek altijd naar manieren om een diepere boodschap of een kostbare herinnering in mijn beelden te verwerken. Terwijl ik rondloop en op zoek ben naar het juiste moment, denk ik vaak: "Hoe gaaf zou het zijn om dat bijzondere licht en die muziek vast te leggen?"
+                    </p>
+                    <p>
+                        Ook speelt muziek een grote rol in mijn inspiratie; een bepaald deuntje roept direct beelden op die ik graag wil filmen. Deze constante stroom van inspiratie vormt de kern van mijn passie voor film.
+                    </p>
+                </div>
+
+                <div class="media-grid">
+                    <div class="media-item">
+                        <h4>bevrijdingsdag Appingedam 2025</h4>
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_2832b53f564e4e949fd527bb152dd3c9f002.jpg">
+                            <source src="https://example.com/video1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="media-item">
+                        <h4>VRIJDAG UMCG expositie blauwdruk</h4>
+                        <p>Ik heb een social post gemaakt voor de UMCG expositie</p>
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_69757444100f4c778581458696cb7026f001.jpg">
+                            <source src="https://example.com/video2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="media-item">
+                        <h4>trailer Toys42hands</h4>
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_1f087f9b43e04c52a1ddf17e7409aa3df000.jpg">
+                            <source src="https://example.com/video3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="media-item">
+                        <h4>VRIJDAG meets NITE @SPOT</h4>
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_af25fbbf73364584abd1b19f3b33e156f002.jpg">
+                            <source src="https://example.com/video4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOTOGRAFIE TAB -->
+            <div id="fotografie" class="tab-content">
+                <div class="content-intro">
+                    <h3>Fotografie - Kunst en Detail</h3>
+                    <p>
+                        Eén foto kan zo krachtig zijn, daar hoef je niet eens zelf bij geweest te zijn, want de foto zegt al genoeg. Dat probeer ik met mijn foto's te bereiken, een heel boek vol verhalen in één foto.
+                    </p>
+                    <p>
+                        Voor mij is een foto niet zomaar een foto, maar een herinnering of een boodschap. Ik beheer momenteel ook de social media van de webshop Toys42hands. Daar maak ik foto's en video's van producten.
+                    </p>
+                </div>
+
+                <div class="media-grid">
+                    <div class="media-item">
+                        <h4>Kunst & Detail</h4>
+                        <img src="https://static.wixstatic.com/media/80ca39_0266b9272200456e947e47ef60740527~mv2.jpg" alt="Kunst fotografie">
+                    </div>
+
+                    <div class="media-item">
+                        <h4>Natuur</h4>
+                        <img src="https://static.wixstatic.com/media/placeholder.jpg" alt="Natuur fotografie">
+                    </div>
+
+                    <div class="media-item">
+                        <h4>Stad</h4>
+                        <img src="https://static.wixstatic.com/media/placeholder.jpg" alt="Stad fotografie">
+                    </div>
+
+                    <div class="media-item">
+                        <h4>Producten</h4>
+                        <p>Toys42hands product fotografie</p>
+                        <img src="https://static.wixstatic.com/media/placeholder.jpg" alt="Product fotografie">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANIMATIE TAB -->
+            <div id="animatie" class="tab-content">
+                <div class="content-intro">
+                    <h3>Animaties van Cultuur Centrum VRIJDAG</h3>
+                    <p>
+                        Ik heb toen ik bij Cultuur Centrum VRIJDAG stage liep niet alleen maar gefilmd. Ik heb ook kleine animaties voor de video's en socials gemaakt. Dit vind ik ook erg leuk om te doen.
+                    </p>
+                </div>
+
+                <div class="media-grid">
+                    <div class="media-item">
+                        <h4>Instagram Adventskalender</h4>
+                        <p>Ik heb vorig jaar op mijn Instagram een adventskalender post geanimeerd in Canva.</p>
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_fd45c5b78f284a44955dbab268c33469f002.jpg">
+                            <source src="https://example.com/anim1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="media-item">
+                        <h4>Work in Progress</h4>
+                        <p>Voor de social media video serie heb ik een kleine animatie gemaakt.</p>
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_fc58d4cb18514f14a3fd72d83f611ee9~mv2.jpg">
+                            <source src="https://example.com/anim2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="media-item">
+                        <h4>Deurtje Open</h4>
+                        <p>Voor de sociale media video serie heb ik een animatie gemaakt.</p>
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_7ae35d9135cd49f09bc9eaf124b3eb87~mv2.jpg">
+                            <source src="https://example.com/anim3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="media-item">
+                        <h4>Vacatures VRIJDAG</h4>
+                        <p>Voor nieuwe vacatures maakte ik een animatie voor social media.</p>
+                        <video width="100%" controls poster="https://static.wixstatic.com/media/80ca39_6760e8cc02a14eb58f3e2f0922b363d0f002.jpg">
+                            <source src="https://example.com/anim4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRAFISCH TAB -->
+            <div id="grafisch" class="tab-content">
+                <div class="content-intro">
+                    <p>
+                        Ik vind niet alleen audiovisueel interessant zoals fotografie of film. Ook grafisch design vind ik om te doen en daar nog meer over te leren.
+                    </p>
+                </div>
+
+                <div class="media-grid">
+                    <div class="media-item">
+                        <h4>Banner Toys42hands</h4>
+                        <p>Voor de vernieuwde website van Toys42hands maakte ik een nieuwe banner met de frisse huisstijl.</p>
+                        <img src="https://static.wixstatic.com/media/80ca39_4dd33e27e649448a9574031c1fa3ba72~mv2.png" alt="Toys42hands banner">
+                    </div>
+
+                    <div class="media-item">
+                        <h4>Flyer Toys42hands</h4>
+                        <p>De flyers van Toys42hands vernieuwd met de nieuwe huisstijl maar met herkenning.</p>
+                        <img src="https://static.wixstatic.com/media/80ca39_b8a4116d31364356930dfa54d150fb90~mv2.png" alt="Toys42hands flyer">
+                    </div>
+
+                    <div class="media-item">
+                        <h4>Adventskalender Toys42hands</h4>
+                        <p>Voor social media maakte ik een adventskalender waar dagelijks een product werd uitgelicht.</p>
+                        <img src="https://static.wixstatic.com/media/80ca39_bb91251ecbc24e358e468f4e62aad267~mv2.png" alt="Adventskalender">
+                    </div>
+
+                    <div class="media-item">
+                        <h4>Certificaat SLP Oostenrijk</h4>
+                        <p>Voor vrijwilligers van SLP maakte ik certificaten.</p>
+                        <img src="https://static.wixstatic.com/media/80ca39_7f7f2208e8a14e33802eb1608c30a11a~mv2.jpg" alt="Certificaat">
+                    </div>
+
+                    <div class="media-item">
+                        <h4>VRIJDAG Poster Vacatures</h4>
+                        <p>Poster voor de vacatures van cultuur centrum VRIJDAG.</p>
+                        <img src="https://static.wixstatic.com/media/80ca39_80fe6e4990b44834894bbefb99b4cd7c~mv2.png" alt="VRIJDAG vacatures poster">
+                    </div>
+
+                    <div class="media-item">
+                        <h4>VRIJDAG Poster Docentenconcert</h4>
+                        <p>Poster voor het docentenconcert van VRIJDAG.</p>
+                        <img src="https://static.wixstatic.com/media/80ca39_20731c2ee3ec45d89d2646c1aadfcb74~mv2.png" alt="Docentenconcert poster">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+
+<!-- SCRIPT -->
+<script>
+    // Header laden
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        });
+
+    // Footer laden
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+
+    // TAB SWITCHING
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active from all buttons en content
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Add active to clicked button
+            button.classList.add('active');
+
+            // Show corresponding content
+            const tabName = button.getAttribute('data-tab');
+            document.getElementById(tabName).classList.add('active');
+        });
+    });
+</script>
+
+</body>
+</html>
