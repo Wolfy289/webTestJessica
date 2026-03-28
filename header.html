@@ -16,16 +16,18 @@
         </nav>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const currentPath = window.location.pathname;
-            const links = document.querySelectorAll(".nav-link");
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentPath = window.location.pathname;
     
-            links.forEach(link => {
-                if (link.getAttribute("href") === currentPath) {
-                    link.classList.add("active");
-                }
-            });
+        const links = document.querySelectorAll(".nav-link");
+    
+        links.forEach(link => {
+            const linkPath = link.getAttribute("href");
+    
+            if (currentPath.includes(linkPath)) {
+                link.classList.add("active");
+            }
         });
+    });
     </script>
-
 </header>
