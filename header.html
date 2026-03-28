@@ -17,16 +17,15 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const currentPath = window.location.pathname.replace(/\/$/, "");
+            const currentPath = window.location.pathname;
             const links = document.querySelectorAll(".nav-link");
     
             links.forEach(link => {
-                const linkPath = link.getAttribute("href").replace(/\/$/, "");
-    
-                if (linkPath === currentPath) {
+                if (link.getAttribute("href") === currentPath) {
                     link.classList.add("active");
                 }
             });
         });
     </script>
+
 </header>
