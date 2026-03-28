@@ -15,18 +15,19 @@
             </ul>
         </nav>
     </div>
-    <script>
-    (function () {
-        const currentPath = window.location.pathname.toLowerCase();
-        const links = document.querySelectorAll(".nav-link");
-    
-        links.forEach(link => {
-            const linkPath = link.getAttribute("href").toLowerCase();
-    
-            if (currentPath.includes(linkPath)) {
-                link.classList.add("active");
-            }
-        });
-    })();
-    </script>
 </header>
+
+<script>
+(function () {
+    const currentPath = window.location.pathname.toLowerCase();
+    const links = document.querySelectorAll(".nav-link");
+
+    links.forEach(link => {
+        const linkPath = link.getAttribute("href").toLowerCase();
+
+        if (currentPath.includes(linkPath)) {
+            link.classList.add("active");
+        }
+    });
+})();
+</script>
