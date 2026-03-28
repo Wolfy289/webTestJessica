@@ -18,18 +18,28 @@
 </header>
 
 <script>
-    fetch('header.html')
-        .then(res => res.text())
-        .then(data => {
-            const container = document.getElementById('header-container');
-            container.innerHTML = data;
+fetch('header.html')
+    .then(res => res.text())
+    .then(data => {
+        const container = document.getElementById('header-container');
+        container.innerHTML = data;
 
-            // 🔥 scripts opnieuw uitvoeren
-            container.querySelectorAll("script").forEach(oldScript => {
-                const newScript = document.createElement("script");
-                newScript.textContent = oldScript.textContent;
-                document.body.appendChild(newScript);
-            });
+        // ✅ ACTIVE FIX HIER (NIET in header.html!)
+        const currentPath = window.location.pathname.toLowerCase();
+        const links = container.querySelectorAll(".nav-link");
+
+        links.forEach(link => {
+            const linkPath = link.getAttribute("href").toLowerCase();
+
+            if (currentPath.includes(linkPath)) {
+                link.classList.add("active");
+            }
         });
-</script>
+    });
 
+fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
