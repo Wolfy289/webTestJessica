@@ -6,7 +6,7 @@
         <nav class="nav">
             <ul>
                 <li><a href="/webTestJessica" class="nav-link">Home</a></li>
-                <li><a href="/webTestJessica/Over" class="nav-link">Over</a></li>
+                <li><a href="/webTestJessica/over" class="nav-link">Over</a></li>
                 <li><a href="/webTestJessica/diensten" class="nav-link">diensten</a></li>
                 <li><a href="/webTestJessica/contact" class="nav-link">contact</a></li>
                 <li><a href="/webTestJessica/klanten" class="nav-link">klanten</a></li>
@@ -17,14 +17,14 @@
     </div>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const currentPath = window.location.pathname;
+        const currentPath = window.location.pathname.toLowerCase();
     
         const links = document.querySelectorAll(".nav-link");
     
         links.forEach(link => {
-            const linkPath = link.getAttribute("href");
+            const linkPath = link.getAttribute("href").toLowerCase();
     
-            if (currentPath.includes(linkPath)) {
+            if (currentPath === linkPath) {
                 link.classList.add("active");
             }
         });
