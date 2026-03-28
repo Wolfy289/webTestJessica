@@ -18,16 +18,18 @@
 </header>
 
 <script>
-(function () {
-    const currentPath = window.location.pathname.toLowerCase();
-    const links = document.querySelectorAll(".nav-link");
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            const container = document.getElementById('header-container');
+            container.innerHTML = data;
 
-    links.forEach(link => {
-        const linkPath = link.getAttribute("href").toLowerCase();
-
-        if (currentPath.includes(linkPath)) {
-            link.classList.add("active");
-        }
-    });
-})();
+            // 🔥 scripts opnieuw uitvoeren
+            container.querySelectorAll("script").forEach(oldScript => {
+                const newScript = document.createElement("script");
+                newScript.textContent = oldScript.textContent;
+                document.body.appendChild(newScript);
+            });
+        });
 </script>
+
